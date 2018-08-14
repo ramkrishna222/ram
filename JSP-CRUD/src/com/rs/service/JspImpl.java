@@ -15,7 +15,7 @@ public class JspImpl {
 	    int status=0; 
 	    Connection connection=null;
 	    PreparedStatement ps=null;
-	   // User u=new User();
+	  
 	    try{  
 	         connection=DBUtil.getConnection();  
 	         ps=connection.prepareStatement(  
@@ -28,7 +28,7 @@ public class JspImpl {
 	        status=ps.executeUpdate();  
 	    }catch (SQLException e) {
 			e.printStackTrace();
-			// log.error("SQLException:" + e.getMessage());
+			
 		} finally {
 			DBUtil.closeConnection(connection);
 
